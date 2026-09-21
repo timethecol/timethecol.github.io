@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="李娜网球奥运金牌专题页面。深入解析李娜在2012年伦敦奥运会获得女单银牌的历史意义、比赛精彩瞬间、技术特点以及对中国网球事业的深远影响。">
+    <meta name="keywords" content="李娜, 网球奥运金牌, 李娜伦敦奥运会, 网球女单, 中国网球, 李娜职业生涯">
+    <title>李娜网球奥运金牌-中国网球历史里程碑与经典战役回顾</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #004d40;
+            --accent-color: #ff6f00;
+            --bg-color: #f5f7fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(135deg, rgba(0, 77, 64, 0.9), rgba(0, 77, 64, 0.7)), url('https://picsum.photos/seed/tenniscourt/1920/1080.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 20px;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Main Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 32px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 24px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+        }
+
+        .view-all {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .view-all:hover {
+            color: var(--accent-color);
+        }
+
+        /* Article List */
+        .article-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .article-image {
+            height: 240px;
+            width: 100%;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .article-body {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: #999;
+            margin-bottom: 12px;
+        }
+
+        .article-title {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .read-more {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .read-more::after {
+            content: '→';
+            margin-left: 6px;
+            transition: transform 0.2s;
+        }
+
+        .read-more:hover::after {
+            transform: translateX(4px);
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .widget-title {
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            color: var(--primary-color);
+            border-left: 4px solid var(--accent-color);
+            padding-left: 12px;
+        }
+
+        .timeline-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 20px;
+            border-left: 1px solid #eee;
+        }
+
+        .timeline-list li:last-child {
+            border-left: none;
+        }
+
+        .timeline-list li::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 0;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+        }
+
+        .timeline-date {
+            font-size: 0.85rem;
+            color: #999;
+            margin-bottom: 4px;
+        }
+
+        .timeline-content {
+            font-weight: 500;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: #f0f0f0;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .tag:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .quote-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .quote-author {
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        /* Comparison Table */
+        .comparison-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        th, td {
+            padding: 16px 24px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #fafafa;
+            font-weight: 700;
+            color: var(--primary-color);
+            width: 30%;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">李娜<span>网球</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">奥运金牌</a></li>
+                    <li><a href="#">职业生涯</a></li>
+                    <li><a href="#">技术分析</a></li>
+                    <li><a href="#">经典战役</a></li>
+                    <li><a href="#">网球百科</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>李娜网球奥运金牌</h1>
+                <p>中国网球历史上的光辉时刻，从伦敦银牌到世界之巅的伟大征程</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>2</h3>
+                        <p>大满贯单打冠军</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>2012</h3>
+                        <p>伦敦奥运会银牌</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>NO.4</h3>
+                        <p>最高世界排名</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="main-grid">
+                <!-- Left Content -->
+                <div class="content-area">
+                    
+                    <!-- Featured Article -->
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/tennismatch/800/400.jpg" alt="李娜在赛场上的专注瞬间" class="article-image">
+                        <div class="article-body">
+                            <div class="article-meta">2012年伦敦奥运会 • 网球女单半决赛</div>
+                            <h2 class="article-title">李娜伦敦奥运银牌：中国网球的里程碑与遗憾</h2>
+                            <p class="article-excerpt">2012年伦敦奥运会是李娜职业生涯中最接近金牌的时刻。面对宿敌阿格涅什卡·拉德万斯卡，李娜在先胜一盘的情况下遗憾落败，获得银牌。这一成绩不仅刷新了中国网球在奥运历史上的最佳战绩，也为日后李娜退役前的最后冲击奠定了信心基础。</p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+
+                    <!-- List Section -->
+                    <section>
+                        <div class="section-header">
+                            <h2 class="section-title">经典战役回顾</h2>
+                            <a href="#" class="view-all">查看全部</a>
+                        </div>
+                        <div class="article-list">
+                            <article class="article-card">
+                                <div class="article-body">
+                                    <div class="article-meta">2012年伦敦奥运会 • 网球女单决赛前瞻</div>
+                                    <h3 class="article-title">巅峰对决：李娜对阵阿格涅什卡·拉德万斯卡</h3>
+                                    <p class="article-excerpt">这场比赛不仅是技术与战术的较量，更是心理素质的博弈。回顾两人在伦敦温布尔登的巅峰对决，分析李娜在关键分上的处理方式...</p>
+                                </div>
+                            </article>
+                            <article class="article-card">
+                                <div class="article-body">
+                                    <div class="article-meta">2012年伦敦奥运会 • 网球女单半决赛</div>
+                                    <h3 class="article-title">突破自我：李娜淘汰莎拉波娃晋级决赛</h3>
+                                    <p class="article-excerpt">在四分之一决赛中，李娜以直落两盘的方式击败了当时的头号种子莎拉波娃，展现出强大的统治力，为中国网球再次挺进奥运决赛圈...</p>
+                                </div>
+                            </article>
+                            <article class="article-card">
+                                <div class="article-body">
+                                    <div class="article-meta">2008年北京奥运会 • 网球女双四分之一决赛</div>
+                                    <h3 class="article-title">双打搭档的默契：李娜与郑洁的北京之旅</h3>
+                                    <p class="article-excerpt">回顾李娜与郑洁在2008年北京奥运会上的表现，她们如何一路过关斩将闯入四强，创造了中国网球在奥运会上的最佳双打成绩。</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- Data Analysis Section -->
+                    <section>
+                        <div class="section-header">
+                            <h2 class="section-title">技术数据对比</h2>
+                        </div>
+                        <div class="comparison-wrapper">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>赛事名称</th>
+                                        <td>2012年伦敦奥运会网球女单决赛</td>
+                                    </tr>
+                                    <tr>
+                                        <th>对手</th>
+                                        <td>阿格涅什卡·拉德万斯卡 (波兰)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>比分</th>
+                                        <td>6-3, 6-0 (拉德万斯卡胜)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>一发成功率</th>
+                                        <td>李娜: 61% vs 对手: 63%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>非受迫性失误</th>
+                                        <td>李娜: 21个 (决赛中失误偏多)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>制胜分</th>
+                                        <td>李娜: 8个 vs 对手: 16个</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- Right Sidebar -->
+                <aside>
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">职业生涯时间轴</h3>
+                        <ul class="timeline-list">
+                            <li>
+                                <div class="timeline-date">2008年</div>
+                                <div class="timeline-content">北京奥运会女双四强，女单16强</div>
+                            </li>
+                            <li>
+                                <div class="timeline-date">2011年</div>
+                                <div class="timeline-content">法网夺冠，成为首位亚洲大满贯冠军</div>
+                            </li>
+                            <li>
+                                <div class="timeline-date">2012年</div>
+                                <div class="timeline-content">伦敦奥运会女单银牌，创造历史</div>
+                            </li>
+                            <li>
+                                <div class="timeline-date">2013年</div>
+                                <div class="timeline-content">澳网夺冠，世界排名升至No.4</div>
+                            </li>
+                            <li>
+                                <div class="timeline-date">2014年</div>
+                                <div class="timeline-content">宣布正式退役</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">相关标签</h3>
+                        <div class="tag-cloud">
+                            <a href="#" class="tag">李娜</a>
+                            <a href="#" class="tag">网球奥运金牌</a>
+                            <a href="#" class="tag">拉德万斯卡</a>
+                            <a href="#" class="tag">莎拉波娃</a>
+                            <a href="#" class="tag">中国网球</a>
+                            <a href="#" class="tag">伦敦奥运会</a>
+                            <a href="#" class="tag">法网冠军</a>
+                            <a href="#" class="tag">澳网冠军</a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">历史意义</h3>
+                        <p style="font-size: 0.9rem; color: #666;">
+                            李娜在2012年伦敦奥运会上获得的银牌，是中国网球史上的一座重要丰碑。它证明了亚洲球员在顶级网球赛事中具备争夺奖牌的实力，激励了无数后来者。
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <!-- Quote Section -->
+        <section class="quote-section">
+            <div class="container quote-content">
+                <p class="quote-text">“这枚银牌对我非常重要。它证明了只要努力，亚洲选手也能站在世界之巅。”</p>
+                <p class="quote-author">—— 李娜</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于李娜</h4>
+                    <ul>
+                        <li><a href="#">人物简介</a></li>
+                        <li><a href="#">职业生涯</a></li>
+                        <li><a href="#">获奖记录</a></li>
+                        <li><a href="#">退役生活</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>网球百科</h4>
+                    <ul>
+                        <li><a href="#">网球规则</a></li>
+                        <li><a href="#">大满贯赛事</a></li>
+                        <li><a href="#">ATP/WTA排名</a></li>
+                        <li><a href="#">网球装备</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>经典回顾</h4>
+                    <ul>
+                        <li><a href="#">法网夺冠时刻</a></li>
+                        <li><a href="#">澳网卫冕之路</a></li>
+                        <li><a href="#">伦敦奥运银牌战</a></li>
+                        <li><a href="#">告别战精彩集锦</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">网站地图</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 李娜网球专题网. 保留所有权利. 本站为内容展示页面，非官方网站。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>97爱蜜桃123-二次元恋爱互动与角色扮演平台</title>
+    <meta name="description" content="97爱蜜桃123提供高质量的二次元恋爱模拟游戏、角色扮演互动及专属社区交流。探索丰富的剧情分支、养成系统与精美CG图，沉浸式体验虚拟恋人的陪伴。">
+    <meta name="keywords" content="97爱蜜桃123,二次元游戏,恋爱模拟,角色扮演,互动小说,虚拟恋人">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b81;
+            --secondary-color: #ff4757;
+            --accent-color: #ffa502;
+            --bg-color: #fdf2f5;
+            --card-bg: #ffffff;
+            --text-main: #2f3542;
+            --text-light: #747d8c;
+            --border-radius: 12px;
+            --shadow: 0 4px 12px rgba(255, 107, 129, 0.15);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+
+        .btn-login {
+            padding: 8px 24px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #fff0f3 0%, #ffe3e8 100%);
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .hero-text h1 span {
+            color: var(--secondary-color);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-primary {
+            padding: 12px 30px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            background-color: #e84118;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            padding: 12px 30px;
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .hero-image {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Feature Section */
+        .features {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #ffe3e8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* Character Showcase */
+        .characters {
+            padding: 80px 20px;
+            background-color: white;
+        }
+
+        .char-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .char-card {
+            background: var(--bg-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .char-card:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow);
+        }
+
+        .char-img {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .char-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .char-name {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .char-tags span {
+            display: inline-block;
+            font-size: 12px;
+            padding: 2px 8px;
+            background-color: #ffe3e8;
+            color: var(--secondary-color);
+            border-radius: 4px;
+            margin: 0 2px;
+        }
+
+        /* Interactive Section */
+        .interactive {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .story-box {
+            background: linear-gradient(135deg, #fff 0%, #fff5f7 100%);
+            border: 1px solid #ffe3e8;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+
+        .story-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--text-main);
+            font-style: italic;
+        }
+
+        .choice-btn {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 20px;
+            background: white;
+            border: 1px solid #dfe4ea;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 14px;
+        }
+
+        .choice-btn:hover {
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2f3542;
+            color: #dfe4ea;
+            padding: 60px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: #a4b0be;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+            }
+
+            .hero-text p {
+                margin: 0 auto 30px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .nav-container {
+                height: auto;
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>97</span>爱蜜桃123
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#games">游戏中心</a></li>
+                    <li><a href="#characters">角色图鉴</a></li>
+                    <li><a href="#community">互动社区</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn-login">立即登录</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>开启你的<span>二次元</span>恋爱冒险</h1>
+                    <p>在97爱蜜桃123，体验最真实的虚拟恋人互动。海量精美剧情、个性化养成系统与超拟真语音，为您打造专属的浪漫空间。</p>
+                    <div class="hero-buttons">
+                        <a href="#games" class="btn-primary">开始游玩</a>
+                        <a href="#characters" class="btn-outline">查看角色</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Placeholder for hero illustration -->
+                    <img src="https://picsum.photos/seed/lovehero/600/400" alt="二次元恋爱游戏场景">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features" id="games">
+            <div class="section-title">
+                <h2>游戏特色</h2>
+                <p>为什么选择97爱蜜桃123作为您的沉浸式体验平台</p>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>实时语音互动</h3>
+                    <p>支持多种方言与情绪语音，角色会根据您的选择实时回应，仿佛真的在对话。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>高精度立绘</h3>
+                    <p>采用顶尖二次元美术团队绘制，每一帧立绘都细节满满，还原度极高。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>多线剧情分支</h3>
+                    <p>您的每一个决定都会影响剧情走向，解锁隐藏CG与独家结局。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">❤️</div>
+                    <h3>深度情感羁绊</h3>
+                    <p>不仅仅是恋爱，更有日记、礼物、约会等系统，建立深厚的情感连接。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Characters -->
+        <section class="characters" id="characters">
+            <div class="char-container">
+                <div class="section-title">
+                    <h2>热门角色</h2>
+                    <p>遇见属于你的命中注定，点击角色查看详细档案</p>
+                </div>
+                <div class="char-grid">
+                    <article class="char-card">
+                        <img src="https://picsum.photos/seed/char1/300/400" alt="温柔学姐" class="char-img">
+                        <div class="char-info">
+                            <h3 class="char-name">林小满</h3>
+                            <div class="char-tags">
+                                <span>温柔</span><span>青梅竹马</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="char-card">
+                        <img src="https://picsum.photos/seed/char2/300/400" alt="高冷学妹" class="char-img">
+                        <div class="char-info">
+                            <h3 class="char-name">苏清冷</h3>
+                            <div class="char-tags">
+                                <span>高冷</span><span>天才</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="char-card">
+                        <img src="https://picsum.photos/seed/char3/300/400" alt="元气邻家" class="char-img">
+                        <div class="char-info">
+                            <h3 class="char-name">陈甜甜</h3>
+                            <div class="char-tags">
+                                <span>元气</span><span>运动系</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="char-card">
+                        <img src="https://picsum.photos/seed/char4/300/400" alt="神秘少女" class="char-img">
+                        <div class="char-info">
+                            <h3 class="char-name">艾米</h3>
+                            <div class="char-tags">
+                                <span>神秘</span><span>外星人</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Demo -->
+        <section class="interactive">
+            <div class="section-title">
+                <h2>互动试玩</h2>
+                <p>点击选项，体验剧情的走向</p>
+            </div>
+            <div class="story-box">
+                <p class="story-text" id="story-text">放学后的教室里，夕阳的余晖洒在课桌上。你刚走到教室门口，就看见她正趴在窗边发呆...</p>
+                <div class="choice-group" id="choice-container">
+                    <button class="choice-btn" onclick="updateStory('approach')">悄悄走过去叫醒她</button>
+                    <button class="choice-btn" onclick="updateStory('wait')">站在门口静静等待</button>
+                    <button class="choice-btn" onclick="updateStory('surprise')">突然拍一下她的肩膀</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于97爱蜜桃123</h4>
+                <p style="font-size: 14px; color: #a4b0be; line-height: 1.8;">
+                    97爱蜜桃123致力于为用户提供高品质的二次元互动娱乐体验。我们汇聚了顶尖的美术、剧本与技术开发团队，打造最真实的虚拟恋爱世界。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">游戏公告</a></li>
+                    <li><a href="#">版本更新</a></li>
+                    <li><a href="#">充值中心</a></li>
+                    <li><a href="#">用户协议</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>客服支持</h4>
+                <ul>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">意见反馈</a></li>
+                    <li><a href="#">违规举报</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关注我们</h4>
+                <p style="font-size: 14px; color: #a4b0be;">
+                    获取最新活动与独家福利<br>
+                    微信公众号: 97爱蜜桃
+                </p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023-2024 97爱蜜桃123. All Rights Reserved. 本站内容仅供娱乐，请文明上网。</p>
+        </div>
+    </footer>
+
+    <script>
+        function updateStory(action) {
+            const storyText = document.getElementById('story-text');
+            const choices = document.getElementById('choice-container');
+            let text = "";
+            let newChoices = "";
+
+            if (action === 'approach') {
+                text = "你轻轻走到她身后，低声唤道：“小满，还没回家吗？”她惊讶地回过头，脸颊微微泛红，有些害羞地看着你...";
+                newChoices = `<button class="choice-btn" onclick="updateStory('invite')">邀请她一起吃晚饭</button>`;
+            } else if (action === 'wait') {
+                text = "你决定在门口等待。几分钟后，她似乎察觉到了你的存在，转过身对你露出了一个温暖的微笑：“我就在等你，你来了啊。”";
+                newChoices = `<button class="choice-btn" onclick="updateStory('chat')">聊起今天的课程</button>`;
+            } else if (action === 'surprise') {
+                text = "你突然拍了一下她的肩膀！她吓得跳了起来，然后转过身瞪着你，最后无奈地叹了口气：“你这个人，真是越来越调皮了。”";
+                newChoices = `<button class="choice-btn" onclick="updateStory('apologize')">笑着道歉</button>`;
+            }
+
+            if (action === 'invite' || action === 'chat' || action === 'apologize') {
+                newChoices = `<button class="choice-btn" onclick="resetStory()">重置剧情</button>`;
+            }
+
+            storyText.style.opacity = 0;
+            setTimeout(() => {
+                storyText.textContent = text;
+                storyText.style.opacity = 1;
+                choices.innerHTML = newChoices;
+            }, 300);
+        }
+
+        function resetStory() {
+            const storyText = document.getElementById('story-text');
+            const choices = document.getElementById('choice-container');
+            storyText.style.opacity = 0;
+            setTimeout(() => {
+                storyText.textContent = "放学后的教室里，夕阳的余晖洒在课桌上。你刚走到教室门口，就看见她正趴在窗边发呆...";
+                choices.innerHTML = `
+                    <button class="choice-btn" onclick="updateStory('approach')">悄悄走过去叫醒她</button>
+                    <button class="choice-btn" onclick="updateStory('wait')">站在门口静静等待</button>
+                    <button class="choice-btn" onclick="updateStory('surprise')">突然拍一下她的肩膀</button>
+                `;
+                storyText.style.opacity = 1;
+            }, 300);
+        }
+    </script>
+</body>
+</html>
